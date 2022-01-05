@@ -70,4 +70,34 @@ export const HeaderLeft = styled.div`
 		}
 	}
 `
-export const HeaderRight = styled.div``
+export const HeaderRight = styled.div`
+	display: flex;
+	align-items: center;
+	color: #ccc;
+	font-size: 12px;
+
+	.search {
+		background-color: #f5f5f5;
+		width: 170px;
+		height: 32px;
+		border-radius: 16px;
+		.ant-input-prefix {
+			text-indent: 10px;
+		}
+		.ant-input {
+			height: 32px;
+			border-radius: 16px;
+		}
+	}
+	.center {
+		width: 90px;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+		border: 1px solid #666;
+		border-radius: 16px;
+		margin: 0 16px;
+		color: #ccc;
+		background-color: transparent;
+	}
+`
