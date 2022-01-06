@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { Carousel } from "antd"
+import { useDispatch, useSelector } from "react-redux"
+import { getBannersAction } from "../../../redux/recommend/action"
 
-export default function Recommend() {
+function Recommend(props) {
 	const contentStyle = {
 		height: "160px",
 		color: "#fff",
@@ -9,7 +11,14 @@ export default function Recommend() {
 		textAlign: "center",
 		background: "#364d79"
 	}
-	useEffect(() => {}, [])
+	const dispatch = useDispatch()
+	const banners = useSelector(state => state.recommend.banners)
+	console.log(banners)
+	useEffect(() => {
+		// console.log(props)
+		dispatch(getBannersAction())
+	}, [dispatch])
+
 	return (
 		<Carousel effect="fade">
 			<div>
@@ -18,3 +27,11 @@ export default function Recommend() {
 		</Carousel>
 	)
 }
+
+// const mapStateToProps = state => {
+// 	return { banners: state.banners }
+// }
+// const mapDispatchToProps = dispatch => ({
+// 	getBanners: () => dispatch(getBannersAction())
+// })
+export default Recommend

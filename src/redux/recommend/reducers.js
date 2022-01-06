@@ -7,7 +7,7 @@ const defaultState = {
 function reducer(state = defaultState, action) {
 	switch (action.type) {
 		case CHANGE_BANNERS:
-			return { ...state, banners: [] }
+			return { ...state, banners: action.banners }
 		default:
 			return state
 	}
