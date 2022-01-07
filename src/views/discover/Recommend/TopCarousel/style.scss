@@ -1,0 +1,59 @@
+.wrapper {
+	.wrapper-item {
+		display: flex;
+		position: relative;
+
+		.wrapper-left {
+			width: 730px;
+			height: 270px;
+			background-color: red;
+			.banner-item {
+				overflow: hidden;
+				height: 270px;
+				.image {
+					width: 100%;
+				}
+			}
+		}
+		.wrapper-right {
+			width: 254px;
+			height: 270px;
+			background: url("../../../../assets/img//download.png");
+		}
+	}
+
+	.Btn {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		width: 37px;
+		height: 63px;
+		transform: translateY(-50%);
+		background-color: transparent;
+		cursor: pointer;
+
+		.btn {
+			position: absolute;
+			width: 37px;
+			height: 63px;
+			background-image: url("../../../../assets/img/banner_sprite.png");
+			background-color: transparent;
+			cursor: pointer;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+		}
+
+		.left {
+			left: -68px;
+			background-position: 0 -360px;
+		}
+
+		.right {
+			right: -1000px;
+			background-position: 0 -508px;
+		}
+	}
+}
