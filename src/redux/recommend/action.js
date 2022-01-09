@@ -28,7 +28,7 @@ const getAblums = res => ({ type: CHANGE_NEWABLBUM, newAblum: res.albums })
 export const getNewAlbumsAction = limit => {
 	return dispatch => {
 		getNewAlbums(limit).then(res => {
-			console.log(res)
+			// console.log(res)
 			dispatch(getAblums(res))
 		})
 	}

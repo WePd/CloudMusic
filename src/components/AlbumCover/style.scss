@@ -1,0 +1,35 @@
+.album-image {
+	position: relative;
+	width: 120px;
+	height: 110px;
+	overflow: hidden;
+
+	img {
+		width: 120px;
+		height: 120px;
+	}
+
+	.cover {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-position: 0 -845px;
+		text-indent: -9999px;
+	}
+}
+.album-info {
+	font-size: 12px;
+	width: 153px;
+	.name {
+		color: #000;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	.artist {
+		color: #666;
+	}
+}

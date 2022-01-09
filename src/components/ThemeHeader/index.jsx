@@ -6,7 +6,7 @@ import "./style.scss"
 const ThemeHeader = memo(function (props) {
 	const { title, keywords } = props
 	return (
-		<div className="list sprite_02">
+		<div className="list">
 			<div className="left">
 				<h3 className="title">{title}</h3>
 				<div className="keyword">
