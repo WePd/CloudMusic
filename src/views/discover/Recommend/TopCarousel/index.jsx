@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useRef } from "react"
+import React, { memo, useRef } from "react"
 import { useSelector, shallowEqual } from "react-redux"
 
 import { Carousel } from "antd"
@@ -11,9 +11,7 @@ export default memo(function TopCarousel() {
 		}),
 		shallowEqual
 	)
-	useEffect(() => {})
 	const bannRef = useRef()
-	console.log(bannRef)
 	return (
 		<div className="wrapper">
 			<div className="wrapper-item wrap-v2">
