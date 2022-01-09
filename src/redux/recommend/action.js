@@ -1,5 +1,5 @@
-import { CHANGE_BANNERS, CHANGE_HOTRECOMMEND } from "./constant"
-import { getBanners, getHotRecommends } from "../../services/recommend"
+import { CHANGE_BANNERS, CHANGE_HOTRECOMMEND, CHANGE_NEWABLBUM } from "./constant"
+import { getBanners, getHotRecommends, getNewAlbums } from "../../services/recommend"
 
 const changeBanner = res => ({ type: CHANGE_BANNERS, banners: res.banners })
 
@@ -19,6 +19,17 @@ export const getHotRecommendAction = limit => {
 		getHotRecommends(limit).then(res => {
 			// console.log(res)
 			dispatch(getHotRecommend(res))
+		})
+	}
+}
+
+const getAblums = res => ({ type: CHANGE_NEWABLBUM, newAblum: res.albums })
+
+export const getNewAlbumsAction = limit => {
+	return dispatch => {
+		getNewAlbums(limit).then(res => {
+			console.log(res)
+			dispatch(getAblums(res))
 		})
 	}
 }

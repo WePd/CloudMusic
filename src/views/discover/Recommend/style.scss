@@ -1,23 +1,15 @@
-.TopMenu {
+.content {
+	background-color: #fff;
 	display: flex;
-	padding-left: 290px;
-	position: relative;
-	top: -4px;
-	.item {
-		a {
-			display: inline-block;
-			height: 20px;
-			line-height: 20px;
-			padding: 0 13px;
-			margin: 7px 17px 0;
-			color: #fff;
+}
 
-			&:hover,
-			&.active {
-				text-decoration: none;
-				background-color: #9b0909;
-				border-radius: 20px;
-			}
-		}
-	}
+.left {
+	padding: 20px;
+	width: 729px;
+}
+
+.right {
+	width: 250px;
+	border: 1px solid #d3d3d3;
+	border-width: 0 1px;
 }
