@@ -6,6 +6,9 @@ import TopCarousel from "./TopCarousel"
 import HotRecommend from "./HotRecommend"
 import Rank from "./Rank"
 import NewAlbum from "./NewAlbum"
+import LogIn from "./LogIn"
+import SettleSinger from "./SettleSinger"
+import HotAchor from "./HotAchor"
 
 import "./style.scss"
 
@@ -19,13 +22,17 @@ function Recommend(props) {
 	return (
 		<div>
 			<TopCarousel />
-			<div className=" content wrap-v2">
+			<div className="content wrap-v2">
 				<div className="left">
 					<HotRecommend />
 					<NewAlbum />
 					<Rank />
 				</div>
-				<div className="right"></div>
+				<div className="right">
+					<LogIn />
+					<SettleSinger />
+					<HotAchor />
+				</div>
 			</div>
 		</div>
 	)

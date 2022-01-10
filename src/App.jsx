@@ -6,6 +6,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import { HashRouter } from "react-router-dom"
 import store from "./redux"
+import PlayerBar from "./views/player/PlayerBar"
 
 export default memo(function App() {
 	return (
@@ -14,6 +15,7 @@ export default memo(function App() {
 				<Header />
 				{renderRoutes(routes)}
 				<Footer />
+				<PlayerBar />
 			</HashRouter>
 		</Provider>
 	)
